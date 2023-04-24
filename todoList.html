@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/todoList.css">
+    <title>Lista de Tareas</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body>
+    <header>
+      <h1>Lista de Tareas</h1>
+      <form name='formTodo'>
+        <fieldset>
+          <legend>Crea</legend>
+          <label><input type="text" name='newTask' id='newTask' placeholder='Nueva Tarea' required></label>
+          <button id='add' type='submit'>+</button>
+        </fieldset>
+        <p id='error'></p>
+        <fieldset>
+          <legend>Elimina</legend>
+          <button id='clear'>Limpiar tareas hechas</button>
+          <button id='delete'>Borrar tareas</button>
+        </fieldset>
+      </form>
+    </header>
+    <main>
+      <ul id='todoList'>
+      </ul>
+      <div class="modal-ext hide">
+        <div class="modal-int">
+          <h2>¿Estás seguro?</h2>
+          <div class="modal-buttons">
+            <button id='deleteOk'>Borrar</button>
+            <button id='deleteCancel'>Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>JSB19RT</footer>
+    <script type='module' src="./js/todoList.js"></script>
+    <script type='module' src="./js/state.js"></script>
+  </body>
+</html>
